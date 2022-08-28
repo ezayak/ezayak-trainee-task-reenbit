@@ -1,10 +1,13 @@
+const CONFIG = process.env.REACT_APP_API_KEY;
+console.log(process.env.REACT_APP_API_KEY);
+
 const firebaseConfig = {
-    apiKey: "AIzaSyCgBynmPztMVVyTnZQu7LQhKjarWfx4_sI",
-    authDomain: "messenger-interview-task.firebaseapp.com",
-    projectId: "messenger-interview-task",
-    storageBucket: "messenger-interview-task.appspot.com",
-    messagingSenderId: "991499482286",
-    appId: "1:991499482286:web:8468ffb90aea1c0518293f"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
   };
 
 export { firebaseConfig };
