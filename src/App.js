@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { MessengerPage } from './routes/messenger-page/messenger-page.component';
+import { useEffect, useState } from 'react';
+import { onAuthStateChangedListener } from './utils/firebase/firebase';
 import './App.css';
+import { LoginPage } from './routes/login-page/login-page.component';
 
 function App() {
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+      const unsubscribe = onAuthStateChangedListener((user) => {
+          setUser(user);
+      });
+
+      return unsubscribe;
+  }, []);
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {user ? <MessengerPage user={user}/> : <LoginPage />}
     </div>
   );
 }
