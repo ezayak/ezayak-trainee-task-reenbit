@@ -1,5 +1,4 @@
 const CONFIG = process.env.REACT_APP_API_KEY;
-console.log(process.env.REACT_APP_API_KEY);
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_API_KEY,
