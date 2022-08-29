@@ -66,6 +66,7 @@ export const Messages = ({contact, removeCurrentChat}) => {
 
     return (
         <div className="messages">
+            <div className="mobile-messages-view"></div>
             <ContactInfo contact={contact} removeCurrentChat={removeCurrentChat}/>
             {
                 loading ? 
