@@ -141,6 +141,23 @@
         padding: 15px;
         gap: 20px;
         align-items: center;
+
+        .back-arrow{
+            display: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .back-arrow{
+                display: block;
+                cursor: pointer;
+            }    
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .contact-info-container{
+            justify-content: space-between
+        }
     }
 
     .messages-list {

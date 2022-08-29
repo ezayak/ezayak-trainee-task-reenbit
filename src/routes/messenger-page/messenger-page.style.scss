@@ -14,3 +14,16 @@
 .messages-container {
     min-width: 75%;
 }
+
+@media only screen and (max-width: 600px) {
+    .contact-list-container {
+        min-width: 100%;
+    }
+    .selected-chat {
+        display: none;
+    }
+
+    .messages-container {
+        min-width: 100%;
+    }
+}

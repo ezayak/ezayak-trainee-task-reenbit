@@ -10,7 +10,7 @@ import './messenger.style.scss';
 import { sendMessage } from "../../utils/api/messages.firebase";
 import { getJoke } from "../../utils/api/random-joke";
 
-export const Messages = ({contact}) => {
+export const Messages = ({contact, removeCurrentChat}) => {
     const [loading, setLoading] = useState(true);
     const [messages, setMessages] = useState([]);
 
@@ -66,7 +66,7 @@ export const Messages = ({contact}) => {
 
     return (
         <div className="messages">
-            <ContactInfo contact={contact}/>
+            <ContactInfo contact={contact} removeCurrentChat={removeCurrentChat}/>
             {
                 loading ? 
                     <div style={{height:'calc(100vh - 180px)', backgroundColor: 'var(--clr-background-light-grey)'}}>
