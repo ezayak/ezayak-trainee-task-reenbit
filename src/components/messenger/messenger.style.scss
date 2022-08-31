@@ -88,7 +88,12 @@
         padding: 15px;
         gap: 20px;
         align-items: center;
+    }
 
+    @media only screen and (max-width: 600px) {
+        .user-info-container{
+            align-items: flex-end;
+        }
     }
 
     .search-bar-container{
@@ -156,7 +161,9 @@
 
     @media only screen and (max-width: 600px) {
         .contact-info-container{
-            justify-content: space-between
+            justify-content: space-between;
+            height: 120px;
+            align-items: flex-end;
         }
     }
 
@@ -212,6 +219,12 @@
         .message-time {
             font-weight: 100;
             font-size: smaller;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .messages-list {
+            height: calc(100vh - 200px);
         }
     }
 
